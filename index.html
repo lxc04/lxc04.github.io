@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能简历 - 张三</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2A5C84;
+            --secondary: #5DA8B3;
+            --accent: #F2A950;
+            --bg-light: rgba(242,169,80,0.05);
+        }
+
+        body {
+            font-family: '思源黑体', 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f8fbfd;
+        }
+
+        /* 统一卡片样式 */
+        .cube-section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .cube-section:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 网格系统 */
+        .cube-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* 统一内容块样式 */
+        .cube-item {
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        /* 头部样式 */
+        .cube-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        /* 导航栏 */
+        .cube-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .cube-nav a {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+            color: var(--primary);
+            transition: all 0.3s;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        }
+
+        .cube-nav a:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* 证书画廊 */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-item {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .cert-item:hover {
+            transform: scale(1.03);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .cube-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="cube-header">
+        <h1 style="color: var(--primary); font-size: 2.5rem;">
+            <i class="fas fa-robot"></i> 张三
+        </h1>
+        <div class="cube-grid" style="margin-top: 1.5rem;">
+            <div class="cube-item">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>东北大学（秦皇岛）</h3>
+                <p>计算机科学与技术专业</p>
+            </div>
+            <div class="cube-item">
+                <i class="fas fa-star"></i>
+                <h3>专业TOP 0.53%</h3>
+                <p>GPA 94/100</p>
+            </div>
+            <div class="cube-item">
+                <i class="fas fa-globe"></i>
+                <h3>CET-6 615分</h3>
+                <p>全国英语竞赛特等奖</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航 -->
+    <nav class="cube-nav">
+        <a href="#edu"><i class="fas fa-university"></i> 教育背景</a>
+        <a href="#research"><i class="fas fa-flask"></i> 科研项目</a>
+        <a href="#awards"><i class="fas fa-trophy"></i> 获奖荣誉</a>
+        <a href="#skills"><i class="fas fa-cubes"></i> 能力矩阵</a>
+    </nav>
+
+    <!-- 教育背景 -->
+    <section class="cube-section" id="edu">
+        <h2 style="color: var(--primary); border-left: 4px solid var(--accent); padding-left: 1rem;">
+            <i class="fas fa-graduation-cap"></i> 教育轨迹
+        </h2>
+        <div class="cube-grid">
+            <div class="cube-item">
+                <h3>2022.09 - 至今</h3>
+                <p>东北大学计算机与通信工程学院</p>
+                <ul>
+                    <li>专业排名：1/190</li>
+                    <li>核心课程全优</li>
+                </ul>
+            </div>
+            <div class="cube-item">
+                <h3>学术成就</h3>
+                <ul>
+                    <li>国家奖学金</li>
+                    <li>校级三好学生标兵</li>
+                    <li>优秀团员标兵</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 科研项目 -->
+    <section class="cube-section" id="research">
+        <h2 style="color: var(--primary); border-left: 4px solid var(--accent); padding-left: 1rem;">
+            <i class="fas fa-microscope"></i> 科研创新
+        </h2>
+        <div class="cube-grid">
+            <div class="cube-item">
+                <h3>道路病害检测算法</h3>
+                <p>2023.09 - 2024.06</p>
+                <ul>
+                    <li>mAP 76%</li>
+                    <li>省级优秀结题</li>
+                    <li>软件著作权</li>
+                </ul>
+            </div>
+            <div class="cube-item">
+                <h3>遥感图像超分辨率</h3>
+                <p>2024.04 - 2025.03</p>
+                <ul>
+                    <li>PSNR提升0.43dB</li>
+                    <li>发明专利受理</li>
+                    <li>SFSIN网络结构</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 能力矩阵 -->
+    <section class="cube-section" id="skills">
+        <h2 style="color: var(--primary); border-left: 4px solid var(--accent); padding-left: 1rem;">
+            <i class="fas fa-cubes"></i> 能力立方
+        </h2>
+        <div class="cube-grid">
+            <div class="cube-item">
+                <i class="fas fa-brain" style="color: var(--secondary);"></i>
+                <h3>算法研发</h3>
+                <p>目标检测/超分重建/强化学习</p>
+            </div>
+            <div class="cube-item">
+                <i class="fas fa-code" style="color: var(--secondary);"></i>
+                <h3>工程实践</h3>
+                <p>PyTorch/Docker/性能优化</p>
+            </div>
+            <div class="cube-item">
+                <i class="fas fa-book" style="color: var(--secondary);"></i>
+                <h3>学术能力</h3>
+                <p>专利撰写/论文绘图/LaTeX</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 获奖荣誉 -->
+    <section class="cube-section" id="awards">
+        <h2 style="color: var(--primary); border-left: 4px solid var(--accent); padding-left: 1rem;">
+            <i class="fas fa-award"></i> 荣誉殿堂
+        </h2>
+        <div class="cert-grid">
+            <div class="cert-item">
+                <img src="images/award1.jpg" alt="AI算法大赛">
+                <div class="cube-item" style="margin:0; border-left:0;">
+                    <h3>全球AI算法大赛</h3>
+                    <p>全国一等奖</p>
+                </div>
+            </div>
+            <div class="cert-item">
+                <img src="images/math-cert.jpg" alt="数模竞赛">
+                <div class="cube-item" style="margin:0; border-left:0;">
+                    <h3>数学建模竞赛</h3>
+                    <p>H奖</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
